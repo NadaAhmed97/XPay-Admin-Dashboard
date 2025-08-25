@@ -2,13 +2,11 @@
 
 import React from "react";
 import { Copy } from "lucide-react";
+import { useParams } from "next/navigation";
 
-export default function MerchantDetailPage({
-  params,
-}: {
-  params: { merchantId: string };
-}) {
-  const { merchantId } = params;
+export default function MerchantDetailPage() {
+  const { merchantId } = useParams() as { merchantId: string };
+
   const copy = async () => navigator.clipboard.writeText(merchantId);
 
   return (
@@ -45,14 +43,15 @@ export default function MerchantDetailPage({
         </div>
 
         <div className="mt-6 flex items-center gap-3">
+          {/* Absolute path to the team route under dashboard */}
           <a
-            href={`/merchants/${merchantId}/team`}
+            href={`/dashboard/merchants/${merchantId}/team`}
             className="rounded-2xl bg-black px-4 py-2 text-sm text-white"
           >
             Manage Team
           </a>
           <a
-            href={`/team?merchantId=${merchantId}`}
+            href={`/dashboard/team?merchantId=${merchantId}`}
             className="rounded-2xl border border-[#2a3244] px-4 py-2 text-sm"
           >
             (Legacy) Team Page
