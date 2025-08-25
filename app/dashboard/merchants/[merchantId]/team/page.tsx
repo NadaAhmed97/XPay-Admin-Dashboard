@@ -2,7 +2,7 @@
 
 import React from "react";
 import { useParams } from "next/navigation";
-import TeamView from "./TeamView"; // <-- relative path
+import TeamView from "./TeamView";
 
 export default function MerchantTeamPage() {
   const { merchantId } = useParams() as { merchantId: string };
