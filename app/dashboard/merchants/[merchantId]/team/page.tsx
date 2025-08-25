@@ -1,14 +1,15 @@
 "use client";
 
 import React from "react";
-import AccessManagementPage from "../../../team/page";
+import { useParams } from "next/navigation";
 
-export default function MerchantTeamWrapper({
-  params,
-}: {
-  params: { merchantId: string };
-}) {
-  // In this mock, AccessManagementPage shows sample data.
-  // Later: refactor AccessManagementPage to accept merchantId as a prop and fetch real data.
-  return <AccessManagementPage />;
+export default function MerchantTeamPage() {
+  const { merchantId } = useParams() as { merchantId: string };
+
+  return (
+    <div className="mx-auto max-w-6xl p-4 md:p-8">
+      <h1 className="mb-4 text-2xl font-bold">Team — {merchantId}</h1>
+      {/* TODO: paste your existing team table/UI here */}
+    </div>
+  );
 }
