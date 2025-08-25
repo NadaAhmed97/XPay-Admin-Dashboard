@@ -85,12 +85,7 @@ export default function MerchantsPage() {
   return (
     <div className="mx-auto max-w-6xl space-y-6 p-4 md:p-8 bg-[#0b0d12] text-[#eef1fb]">
       <Card
-        title="Merchants"
-        actions={
-          <Btn>
-            <Plus className="mr-2 h-4 w-4" /> New Merchant
-          </Btn>
-        }
+
       >
         {/* Filters */}
         <div className="mb-4 grid gap-3 md:grid-cols-4">
