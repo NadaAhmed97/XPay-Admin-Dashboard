@@ -24,3 +24,27 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* XPay brand tokens */
+:root {
+  --xp-bg: #0b0d12;            /* page background */
+  --xp-surface: #131621;       /* cards */
+  --xp-surface-2: #1a1f2d;     /* table headers / subtle surfaces */
+  --xp-border: #2a3244;        /* strokes */
+  --xp-text: #eef1fb;          /* primary text */
+  --xp-muted: #aab2c8;         /* secondary text */
+  --xp-primary: #4a46ff;       /* electric blue */
+  --xp-primary-hover: #3e3bff; /* hover */
+}
+
+/* optional utility helpers */
+.xp-bg { background: var(--xp-bg); color: var(--xp-text); }
+.xp-card { background: var(--xp-surface); border-color: var(--xp-border); }
+.xp-card-2 { background: var(--xp-surface-2); }
+.xp-border { border-color: var(--xp-border); }
+.xp-text-muted { color: var(--xp-muted); }
+.xp-btn { background: var(--xp-primary); color: #fff; }
+.xp-btn:hover { background: var(--xp-primary-hover); }
+.xp-outline { background: transparent; border-color: var(--xp-border); color: var(--xp-text); }
+.xp-outline:hover { background: rgba(255,255,255,.05); }
+
